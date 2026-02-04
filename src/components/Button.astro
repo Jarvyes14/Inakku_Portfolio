@@ -1,0 +1,14 @@
+---
+import '../styles/global.css';
+interface Props {
+  text: string;
+  link: string;
+}
+
+const { text } = Astro.props;
+const { link } = Astro.props;
+---
+
+<a id="container" href={link}  class="bg-[#19191A] min-w-1/5 h-min pt-3 pb-3 pl-4 pr-4 xs:pl-2 xs:pr-2 xs:pt-2 xs:pb-2 rounded-2xl text-[#918C8F] lg:text-lg md:text-md sm:text-sm xs:text-xs text-center">
+    {text}
+</a>

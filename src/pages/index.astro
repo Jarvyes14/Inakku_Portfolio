@@ -1,11 +1,42 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Block from '../components/Block.astro';
+import Button from '../components/Button.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<Block>
+		<Header/>
+		<div class="flex items-center justify-center w-full flex-col p-10">
+			<div class="flex justify-evenly w-full">
+				<Button text="Commissions" link='https://vgen.co/INAKKU' />
+				<Button text="TOS" link='https://vgen.co/INAKKU' />
+				<Button text="About" link='https://vgen.co/INAKKU' />
+				<Button text="Portfolio" link='https://vgen.co/INAKKU' />
+			</div>
+
+			<div class="lg:grid lg:grid-cols-4 mt-16 gap-3 md:grid md:grid-cols-2">
+				<div class="flex flex-col items-center">
+					<img src="https://inakku.carrd.co/assets/images/image02.jpg?v=27e83272" alt="" class="rounded-full h-3/5 lg:h-3/7">
+					<h1 class="text-3xl lg:text-xl" style="font-family: 'Press Start 2P', cursive;"><span class="xl:text-4xl lg:text-3xl md:text-5xl sm:text-5xl xs:text-5xl" style="display: inline-block;">&#10022;</span> INA <span class="xl:text-4xl lg:text-3xl md:text-5xl sm:text-5xl xs:text-5xl" style="display: inline-block;">&#10022;</span></h1>
+					<p class="-mt-1 text-gray-500 text-sm">@Inakku</p>
+					<p class="mt-2 text-sm tracking-widest">Digital Ilustrator</p>
+					<div class="flex items-center gap-2 mt-4 brightness-50">
+						<i class="fab fa-twitter"></i>
+						<img src="src/assets/VGen.png" alt="VGen" style="filter: brightness(0) invert(1); height: 1.5em;" />
+						<i class="fas fa-envelope"></i>
+					</div>
+				</div>
+				<img src="https://inakku.carrd.co/assets/images/gallery03/a45a0b64.jpg?v=27e83272" alt="" class="rounded-3xl w-60 xl:h-75 object-cover mt-6 place-self-center lg:h-60">
+				<img src="https://inakku.carrd.co/assets/images/gallery03/1ac703d4.jpg?v=27e83272" alt="" class="rounded-3xl w-60 xl:h-75 object-cover mt-6 place-self-center lg:h-60">
+				<img src="https://inakku.carrd.co/assets/images/gallery03/8b5ef5b5.jpg?v=27e83272" alt="" class="rounded-3xl w-60 xl:h-75 object-cover mt-6 place-self-center lg:h-60">
+			</div>
+		</div>
+
+		<div id="container" class="h-full ml-10 mr-10 mb-15 border-b-2 border-dotted border-[#2f2d2e] text-[#918C8F] text-xl">
+
+	</Block>
 </Layout>
